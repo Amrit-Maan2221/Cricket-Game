@@ -5,11 +5,11 @@ class Team {
 
 public:
 	Team();
-	std::string name;
+	string name;
 	int totalRunsScored;
 	int wicketsLost;
 	int totalBallsBowled;
-	vector<Player> players;;
+	vector<Player> players;
 };
 
 Team::Team() {

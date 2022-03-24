@@ -6,7 +6,7 @@ public:
 	Game();
 	int playersPerTeam;
 	int maxBalls;
-	int totalPlayers;
+	//int totalPlayers;
 	std::string players[11];
 
 	bool isFirstInnings;
@@ -15,7 +15,7 @@ public:
 	Player* batsman, * bowler;
 
 	void welcome();
-	void showAllPlayers();
+	//void showAllPlayers();
 	int takeIntegerInput();
 	void selectPlayers();
 	bool validateSelectedPlayer(int);
@@ -35,21 +35,21 @@ public:
 
 Game::Game() {
 
-	playersPerTeam = 4;
-	maxBalls = 6;
-	totalPlayers = 11;
+	playersPerTeam = 11;
+	maxBalls = 300;
+	//totalPlayers = 11;
 
-	players[0] = "Virat";
-	players[1] = "Rohit";
-	players[2] = "Dhawan";
-	players[3] = "Pant";
-	players[4] = "Karthik";
-	players[5] = "KLRahul";
-	players[6] = "Jadeja";
-	players[7] = "Hardik";
-	players[8] = "Bumrah";
-	players[9] = "BKumar";
-	players[10] = "Ishant";
+	//players[0] = "Virat";
+	//players[1] = "Rohit";
+	//players[2] = "Dhawan";
+	//players[3] = "Pant";
+	//players[4] = "Karthik";
+	//players[5] = "KLRahul";
+	//players[6] = "Jadeja";
+	//players[7] = "Hardik";
+	//players[8] = "Bumrah";
+	//players[9] = "BKumar";
+	//players[10] = "Ishant";
 
 	isFirstInnings = false;
 	teamA.name = "Team-A";
@@ -74,23 +74,23 @@ void Game::welcome() {
 	cout << "| 1. Create 2 teams (Team-A and Team-B with 4      |" << endl;
 	cout << "|    players each) from a given pool of 11 players.|" << endl;
 	cout << "| 2. Lead the toss and decide the choice of play.  |" << endl;
-	cout << "| 3. Each innings will be of 6 balls.              |" << endl;
+	cout << "| 3. Each innings will be of 300 balls.            |" << endl;
 	cout << "----------------------------------------------------" << endl;
 }
 
 
-void Game::showAllPlayers() {
-
-	cout << endl;
-	cout << "---------------------------------------" << endl;
-	cout << "|========== Pool of Players ==========|" << endl;
-	cout << "---------------------------------------" << endl;
-	cout << endl;
-
-	for (int i = 0; i < totalPlayers; i++) {
-		cout << "\t\t[" << i << "] " << players[i] << endl;
-	}
-}
+//void Game::showAllPlayers() {
+//
+//	cout << endl;
+//	cout << "---------------------------------------" << endl;
+//	cout << "|========== Pool of Players ==========|" << endl;
+//	cout << "---------------------------------------" << endl;
+//	cout << endl;
+//
+//	for (int i = 0; i < totalPlayers; i++) {
+//		cout << "\t\t[" << i << "] " << players[i] << endl;
+//	}
+//}
 
 
 int Game::takeIntegerInput() {
@@ -131,6 +131,8 @@ bool Game::validateSelectedPlayer(int index) {
 
 	return true;
 }
+
+
 
 void Game::selectPlayers() {
 
@@ -181,6 +183,8 @@ void Game::selectPlayers() {
 		}
 	}
 }
+
+
 
 void Game::showTeamPlayers() {
 
