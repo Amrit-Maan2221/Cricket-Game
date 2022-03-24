@@ -1,9 +1,79 @@
 // C++ program for the above approach
 #include "Game.h"
 
+void welcome()
+{
+	cout << "---------------------------------------" << endl;
+	cout << "|============== CRIC-IN ==============|" << endl;
+	cout << "|                                     |" << endl;
+	cout << "|   Welcome to Virtual Cricket Game   |" << endl;
+	cout << "---------------------------------------" << endl;
+
+	cout << endl << endl;
+	cout << "----------------------------------------------------" << endl;
+	cout << "|================== Instructions ==================|" << endl;
+	cout << "----------------------------------------------------" << endl;
+	cout << "|                                                  |" << endl;
+	//cout << "| 1. Create 2 teams (Team-A and Team-B with 4      |" << endl;
+	//cout << "|    players each) from a given pool of 22 players.|" << endl;
+	cout << "| 1. Lead the toss and decide the choice of play.  |" << endl;
+	cout << "| 2. Each innings will be of 300 balls.            |" << endl;
+	cout << "----------------------------------------------------\n\n" << endl;
+}
+
+
+
+void showAllPlayers(Team A, Team B)
+{
+	cout << "\n----------------------------------------------------" << endl;
+	cout << "|================== Team One Players ==================|" << endl;
+
+
+	for (int i = 0; i < A.players.size(); i++)
+	{
+		string platerName = A.players[i].name;
+		cout << (i + 1) << ". " << A.players[i].name << endl;
+	}
+
+
+	cout << "\n----------------------------------------------------" << endl;
+	cout << "|================== Team Two Players ==================|" << endl;
+	for (int i = 0; i < B.players.size(); i++)
+	{
+		cout << (i + 1) << ". " << B.players[i].name << endl;
+	}
+}
+
+int toss()
+{
+	//toss......
+
+	cout << endl;
+	cout << "-----------------------------------" << endl;
+	cout << "|========== Let's Toss  ==========|" << endl;
+	cout << "-----------------------------------" << endl << endl;
+
+	cout << "Tossing the coin..." << endl << endl;
+
+	int randomValue = rand() % 2;	// 0 or 1
+
+	switch (randomValue) {
+	case 0:
+		cout << "Team-A won the toss....will be batting" << endl << endl;
+		return 0;
+	case 1:
+		cout << "Team-B won the toss....will be batting" << endl << endl;
+		return 1;
+	}
+	
+}
+
 
 	
 int main() {
+
+	srand(time(NULL));
+
 	Team India;
 	Team England;
 
@@ -56,8 +126,37 @@ int main() {
 	England.players.push_back(j);
 	England.players.push_back(k);
 
+	int balls = 300;
+	
+	welcome();
+	showAllPlayers(India, England);
+	int tossResult = toss();
+
+	
+	
+
+
+	for (int bowledBowled = 1; bowledBowled <= (2*balls); bowledBowled++)
+	{
+		if (tossResult == 0)
+		{
+			//Team India to Bat
+		}
+		
+
+
+		if (bowledBowled == balls)
+		{
+			//switch Teams
+			//Team England to bat
+		}
+	}
+
 
 	
 
 	return 0;
 }
+
+
+

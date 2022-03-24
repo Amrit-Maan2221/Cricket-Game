@@ -4,7 +4,7 @@ class Player {
 
 public:
 	Player();
-	Player(string name, int role);
+	Player(string nameOfPlayer, int roleOfPlayer);
 	string name;
 	int id;
 	int matchedPlayed;
@@ -27,7 +27,9 @@ Player::Player() {
 	role = BATSMAN;
 }
 
-Player::Player(string name, int role) {
+Player::Player(string nameOfPlayer, int roleOfPlayer) {
+	name = nameOfPlayer;
+	role = roleOfPlayer;
 	matchedPlayed = 0;
 	runsScored = 0;
 	ballsPlayed = 0;
